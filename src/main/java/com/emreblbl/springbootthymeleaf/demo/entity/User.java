@@ -3,8 +3,8 @@ package com.emreblbl.springbootthymeleaf.demo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "user")
+public class User {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,9 +16,9 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    public Employee(){}
+    public User(){}
 
-    public Employee(int id, String firstName, String lastName, String email) {
+    public User(int id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,7 +59,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "User{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
