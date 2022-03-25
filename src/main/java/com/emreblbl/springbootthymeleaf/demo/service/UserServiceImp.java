@@ -55,4 +55,13 @@ public class UserServiceImp implements UserService{
         }
         return userRepository.findAll();
     }
+
+    @Override
+    public Boolean confirmEmail(String email) {
+        User user = userRepository.confirmEmail(email);
+        if(user ==null){
+            return false;
+        }
+        return true;
+    }
 }

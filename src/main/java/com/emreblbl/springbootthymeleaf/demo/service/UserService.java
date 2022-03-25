@@ -11,5 +11,6 @@ public interface UserService {
     public void delete(int theId);
     public List<User> searchForSurname(String surname);
     public List<User> searchWhereAny(String keyword);
+    public Boolean confirmEmail(String email);
 
 }
